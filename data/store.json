@@ -1,0 +1,21 @@
+
+{
+  "discoveries": [],
+  "sources": [],
+  "scans": [],
+  "reports": [],
+  "savedPages": [
+    {
+      "id": "71f3743f-3566-4597-bd54-34d270c2c3c2",
+      "title": "Example",
+      "url": "https://example.com/",
+      "category": "General",
+      "note": "",
+      "savedAt": "2026-11-23T09:40:57.321Z"
+    }
+  ],
+  "settings": {
+    "lastScanAt": null,
+    "schedulerEnabled": true
+  }
+}
