@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": "ai",
+    "name": "AI Universe",
+    "icon": "✳",
+    "description": "Models, agents, local AI, image, video, voice and coding systems.",
+    "subs": ["AI models & LLMs", "AI agents & automation", "Local AI", "Image & video AI", "Voice AI", "AI research"]
+  },
+  {
+    "id": "developer",
+    "name": "Developer Universe",
+    "icon": "⌘",
+    "description": "Projects, APIs, SDKs, frameworks, libraries and engineering tools.",
+    "subs": ["GitHub projects", "APIs & SDKs", "Frameworks & libraries", "Backend & databases", "Hosting & deployment", "Developer utilities"]
+  },
+  {
+    "id": "internet",
+    "name": "Internet & Cybersecurity",
+    "icon": "◉",
+    "description": "Browsers, privacy, networking, web standards and defensive security.",
+    "subs": ["Browser technology", "Privacy tools", "Networking & DNS", "Web standards", "Defensive security", "Useful internet tricks"]
+  },
+  {
+    "id": "future",
+    "name": "Future Technology",
+    "icon": "⌁",
+    "description": "Robotics, quantum, chips, automation and emerging interfaces.",
+    "subs": ["Robotics", "Quantum computing", "Semiconductors", "Automation", "Future interfaces", "Emerging computing"]
+  },
+  {
+    "id": "student",
+    "name": "Student Universe",
+    "icon": "▤",
+    "description": "Free learning, scholarships, internships, competitions and projects.",
+    "subs": ["Free courses", "Scholarships", "Internships", "Hackathons", "Student projects", "Career preparation"]
+  },
+  {
+    "id": "tools",
+    "name": "Digital Tools",
+    "icon": "◇",
+    "description": "Useful software, productivity, design, documents and free alternatives.",
+    "subs": ["Productivity", "PDF & file tools", "Design & UI/UX", "Writing & research", "Collaboration", "Free alternatives"]
+  },
+  {
+    "id": "research",
+    "name": "Research Universe",
+    "icon": "⌕",
+    "description": "Papers, datasets, experiments, inventions and open research.",
+    "subs": ["Research papers", "Datasets", "Open science", "Experiments", "University projects", "Benchmarks"]
+  },
+  {
+    "id": "startups",
+    "name": "Startup & Company Radar",
+    "icon": "↗",
+    "description": "Product launches, company updates, indie makers and changelogs.",
+    "subs": ["New product launches", "Company announcements", "Indie makers", "Startup tools", "Product updates", "Public roadmaps"]
+  },
+  {
+    "id": "creative",
+    "name": "Creative Universe",
+    "icon": "✧",
+    "description": "3D, animation, video, graphics, audio and creator technology.",
+    "subs": ["3D & animation", "Video creation", "Graphic design", "Audio tools", "Creator AI", "Publishing"]
+  },
+  {
+    "id": "data",
+    "name": "Open Data & Knowledge",
+    "icon": "▦",
+    "description": "Public datasets, digital libraries, maps and open knowledge.",
+    "subs": ["Open datasets", "Digital libraries", "Maps & geospatial", "Public APIs", "Knowledge archives", "Open government data"]
+  },
+  {
+    "id": "science",
+    "name": "Science & Space",
+    "icon": "✺",
+    "description": "Astronomy, satellites, missions, discoveries and science tools.",
+    "subs": ["Astronomy", "Space missions", "Satellites", "Physics & science", "Scientific tools", "Earth observation"]
+  },
+  {
+    "id": "coming",
+    "name": "Coming Next",
+    "icon": "◷",
+    "description": "Announced features, public betas, waitlists and upcoming opportunities.",
+    "subs": ["Confirmed launches", "Public betas", "Product waitlists", "Feature roadmaps", "Upcoming events", "Early access"]
+  }
+]
