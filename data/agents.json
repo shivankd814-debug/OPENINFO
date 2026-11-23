@@ -1,0 +1,23 @@
+[
+  {
+    "id": "coordinator",
+    "name": "Discovery Coordinator",
+    "role": "Coordinates discovery scans",
+    "status": "scheduled"
+  },
+  {
+    "id": "github",
+    "name": "GitHub Explorer",
+    "role": "Finds developer projects"
+  },
+  {
+    "id": "ai",
+    "name": "AI Explorer",
+    "role": "Discovers AI models and tools"
+  },
+  {
+    "id": "research",
+    "name": "Research Explorer",
+    "role": "Finds research publications"
+  }
+]
