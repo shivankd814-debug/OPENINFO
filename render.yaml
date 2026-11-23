@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: openinfo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ENABLE_SCHEDULER
+        value: "true"
+      - key: SCAN_INTERVAL_MINUTES
+        value: "90"
+      - key: REDDIT_SUBREDDITS
+        value: "LocalLLaMA,opensource,SideProject,InternetIsBeautiful,learnprogramming,webdev,ArtificialIntelligence"
+      - key: MAX_ITEMS_PER_SOURCE
+        value: "18"
+      - key: NODE_ENV
+        value: production

@@ -1,0 +1,25 @@
+OPENINFO — deploy to the existing Render service
+
+1. Extract this ZIP.
+2. Upload/commit the CONTENTS of this folder to the root of GitHub repository:
+   shivankd814-debug/OPENINFO
+   Do not upload the outer OPENINFO-PREMIUM folder as an extra nested directory.
+3. Keep package.json, render.yaml, README.md at repository root.
+4. Existing Render Web Service:
+   Name: OPENINFO
+   Build: npm install
+   Start: npm start
+   Health check: /api/health
+5. Confirm the service is connected to the same repository and branch.
+6. Add server environment variables if needed:
+   ENABLE_SCHEDULER=true
+   SCAN_INTERVAL_MINUTES=90
+   REDDIT_SUBREDDITS=LocalLLaMA,opensource,SideProject,InternetIsBeautiful,learnprogramming,webdev,ArtificialIntelligence
+7. Wait for deploy, then open /api/health.
+
+Important:
+- This ZIP does not claim to have deployed itself.
+- Render Free local JSON storage is ephemeral. Add PostgreSQL before treating scan history as permanent.
+- Reddit public RSS may be throttled or unavailable; source status will show actual failures.
+
+Optional Chrome extension: configure OPENINFO_EXTENSION_TOKEN in Render, then load the extension/ folder in Chrome Developer mode and set the same token in its Settings.

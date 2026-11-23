@@ -1,78 +1,38 @@
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+import { fileURLToPath } from "node:url";
 
-import fs from 'node:fs';
-import path from 'node:path';
-import crypto from 'node:crypto';
-import {fileURLToPath} from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const dir = path.join(root, "data");
+const file = path.join(dir, "store.json");
+fs.mkdirSync(dir, { recursive: true });
 
-const here=path.dirname(fileURLToPath(import.meta.url));
-const root=here;
+const blank = () => ({
+  discoveries: [], sources: [], scans: [], reports: [], savedPages: [],
+  settings: { lastScanAt: null, schedulerEnabled: true }
+});
 
-const dataDir=path.join(root,'data');
-const dbFile=path.join(dataDir,'store.json');
-
-fs.mkdirSync(dataDir,{recursive:true});
-
-const initial={
-  discoveries:[],
-  sources:[],
-  scans:[],
-  reports:[],
-  savedPages:[],
-  settings:{
-    lastScanAt:null,
-    schedulerEnabled:true
-  }
-};
-
-export function readStore(){
-  try{
-    return {
-      ...structuredClone(initial),
-      ...JSON.parse(fs.readFileSync(dbFile,'utf8'))
-    };
-  }catch{
-    return structuredClone(initial);
-  }
+export function readStore() {
+  try { return { ...blank(), ...JSON.parse(fs.readFileSync(file, "utf8")) }; }
+  catch { return blank(); }
 }
-
-export function writeStore(data){
-  const tmp=dbFile+'.tmp';
-  fs.writeFileSync(tmp,JSON.stringify(data,null,2));
-  fs.renameSync(tmp,dbFile);
+export function writeStore(data) {
+  const temp = file + ".tmp";
+  fs.writeFileSync(temp, JSON.stringify(data, null, 2));
+  fs.renameSync(temp, file);
 }
-
-export function upsertDiscoveries(items){
-  const db=readStore();
-  let added=0;
-  let updated=0;
-
-  for(const item of items){
-    const key=item.canonicalUrl||item.url;
-    const old=db.discoveries.find(
-      x=>x.canonicalUrl===key||x.url===key
-    );
-
-    if(old){
-      Object.assign(old,item,{
-        updatedAt:new Date().toISOString()
-      });
-      updated++;
-    }else{
-      db.discoveries.unshift({
-        ...item,
-        id:item.id||crypto.randomUUID(),
-        discoveredAt:new Date().toISOString()
-      });
-      added++;
-    }
+export function upsert(items) {
+  const db = readStore();
+  let added = 0, updated = 0;
+  for (const item of items) {
+    const key = item.canonicalUrl || item.url;
+    const old = db.discoveries.find(x => (x.canonicalUrl || x.url) === key);
+    if (old) { Object.assign(old, item, { updatedAt: new Date().toISOString() }); updated++; }
+    else { db.discoveries.unshift({ ...item, id: crypto.randomUUID(), discoveredAt: new Date().toISOString() }); added++; }
   }
-
-  db.discoveries=db.discoveries.slice(0,5000);
+  db.discoveries = db.discoveries.slice(0, 5000);
   writeStore(db);
-
-  return {
-    added,
-    updated,
-    total:db.discoveries.length
-  };
+  return { added, updated, total: db.discoveries.length };
 }
+export { root };
