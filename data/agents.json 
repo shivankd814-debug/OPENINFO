@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": "coordinator",
+    "name": "Discovery Coordinator",
+    "source": "Internal scheduler",
+    "purpose": "Coordinates scheduled discovery cycles and reports actual outcomes."
+  },
+  {
+    "id": "reddit",
+    "name": "Reddit Community Hunter",
+    "source": "Public subreddit RSS",
+    "purpose": "Finds useful community-shared tools, projects and practical discussions."
+  },
+  {
+    "id": "github",
+    "name": "GitHub Project Hunter",
+    "source": "GitHub public search API",
+    "purpose": "Finds recently created public repositories."
+  },
+  {
+    "id": "ai",
+    "name": "AI Model Hunter",
+    "source": "Hugging Face public API",
+    "purpose": "Finds recently updated public AI models."
+  },
+  {
+    "id": "hackernews",
+    "name": "Community Signal Hunter",
+    "source": "Hacker News public API",
+    "purpose": "Finds new public discussions and linked projects."
+  },
+  {
+    "id": "research",
+    "name": "Research Hunter",
+    "source": "OpenAlex public API",
+    "purpose": "Finds recent research metadata."
+  },
+  {
+    "id": "rss",
+    "name": "Official Feed Hunter",
+    "source": "Configured public RSS/Atom feeds",
+    "purpose": "Reads public release notes and official announcements."
+  },
+  {
+    "id": "verify",
+    "name": "Source & Safety Verifier",
+    "source": "Metadata checks",
+    "purpose": "Validates URLs, provenance and required fields; does not claim independent fact-checking."
+  },
+  {
+    "id": "dedupe",
+    "name": "Duplicate Filter",
+    "source": "Canonical URL matching",
+    "purpose": "Avoids repeated records."
+  },
+  {
+    "id": "quality",
+    "name": "Quality Ranker",
+    "source": "Metadata scoring",
+    "purpose": "Prioritises recency, description quality and source relevance."
+  },
+  {
+    "id": "language",
+    "name": "Language Layer",
+    "source": "Frontend translations",
+    "purpose": "Provides Hindi, English and Hinglish interface labels."
+  },
+  {
+    "id": "update",
+    "name": "Refresh Agent",
+    "source": "Scheduled connectors",
+    "purpose": "Refreshes collected metadata on the next scan."
+  }
+]
