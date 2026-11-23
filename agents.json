@@ -1,0 +1,22 @@
+[
+{"id":"master-coordinator","name":"Master Coordinator","role":"Plans research cycles and assigns specialist work","implementation":"scheduler + collector orchestration"},
+{"id":"source-hunter","name":"Source Hunter","role":"Finds candidate public sources from already verified references","implementation":"source registry workflow; human approval required before enabling unknown sources"},
+{"id":"technology-hunter","name":"Technology Hunter","role":"Finds new products, websites, apps and services","implementation":"connector framework"},
+{"id":"ai-hunter","name":"AI Hunter","role":"Finds AI models, tools and releases","implementation":"Hugging Face public model API"},
+{"id":"github-hunter","name":"GitHub Hunter","role":"Finds recently created repositories","implementation":"GitHub public search API"},
+{"id":"course-hunter","name":"Course Hunter","role":"Finds courses, certificates and learning opportunities","implementation":"freeCodeCamp public RSS learning feed; not a complete course/certificate catalogue"},
+{"id":"free-tools-hunter","name":"Free Tools Hunter","role":"Finds free and open-source tools and verifies their pricing","implementation":"pricing-aware discovery schema; automated pricing verification pending"},
+{"id":"trick-hunter","name":"Trick Hunter","role":"Finds useful public tutorials and workflows","implementation":"research workflow slot"},
+{"id":"trend-hunter","name":"Trend Hunter","role":"Tracks emerging public discussion and activity","implementation":"Hacker News new-story connector; not a global trend index"},
+{"id":"company-watcher","name":"Company Watcher","role":"Tracks official company announcements and changelogs","implementation":"RSS connector framework pending source configuration"},
+{"id":"upcoming-hunter","name":"Upcoming Hunter","role":"Tracks official roadmaps, betas and future launches","implementation":"status taxonomy; source-specific roadmap adapters pending"},
+{"id":"social-hunter","name":"Social Hunter","role":"Finds permitted public social discoveries","implementation":"official APIs / accessible public feeds only; no private scraping"},
+{"id":"hidden-gem-hunter","name":"Hidden Gem Hunter","role":"Surfaces lesser-known projects and independent makers","implementation":"repository and community-source discovery"},
+{"id":"research-agent","name":"Research Agent","role":"Follows references and finds supporting context","implementation":"connector framework"},
+{"id":"image-agent","name":"Image Agent","role":"Collects official image and preview metadata","implementation":"source-provided image metadata only"},
+{"id":"verification-agent","name":"Verification Agent","role":"Checks provenance and source linkage","implementation":"source-linked provenance label; independent multi-source verification pending"},
+{"id":"duplicate-agent","name":"Duplicate Agent","role":"Prevents repeated discoveries","implementation":"canonical URL upsert"},
+{"id":"ranking-agent","name":"Ranking Agent","role":"Ranks by recency and utility","implementation":"latest ordering; trend scoring pending"},
+{"id":"translation-agent","name":"Translation Agent","role":"Produces Hindi, English and Hinglish explanations","implementation":"UI copy is English; Hindi/Hinglish translation pipeline not configured"},
+{"id":"update-agent","name":"Update Agent","role":"Rechecks pricing, availability and product status","implementation":"scheduled scan updates source records; field-level change audit pending"}
+]

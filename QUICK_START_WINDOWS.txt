@@ -1,0 +1,32 @@
+OPENINFO — WINDOWS QUICK START
+
+1. Extract OPENINFO-Final-v1.0.zip.
+2. Install Node.js 20 or newer.
+3. Open the extracted OPENINFO-Final folder.
+4. Open PowerShell in that folder.
+5. Copy .env.example to .env.
+6. Edit .env and set long, different random values for:
+   OPENINFO_ADMIN_TOKEN
+   OPENINFO_EXTENSION_TOKEN
+7. Start the app:
+   node server/index.js
+8. Open this address in Chrome:
+   http://localhost:3000
+
+The first public-source scan starts automatically after the server starts.
+To disable scheduled scans, set ENABLE_SCHEDULER=false in .env.
+
+To load the Chrome extension:
+1. Open chrome://extensions
+2. Enable Developer mode
+3. Click Load unpacked
+4. Select the extension folder
+5. Open its Settings and enter http://localhost:3000 and your extension token
+6. Open a webpage you want to save and click the extension manually
+
+Important:
+- Do not share your tokens.
+- A scan needs internet access from the computer/server running OPENINFO.
+- Public API quotas and network failures are shown in Admin Studio.
+- Some zones are ready in the UI but still need their dedicated data connectors.
+- No fabricated discoveries are bundled as live data.

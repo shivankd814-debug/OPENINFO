@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111310"><meta name="description" content="OPENINFO discovers useful new tools, courses, projects, launches and internet discoveries from across the web."><title>OPENINFO — Discover what matters</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#home"><span class="brand-mark">O</span><span>OPEN<span class="brand-light">INFO</span><small>GLOBAL DISCOVERY RADAR</small></span></a>
+  <button class="mobile-close" id="closeNav" aria-label="Close navigation">×</button>
+  <div class="side-label">WORKSPACE</div>
+  <nav class="primary-nav">
+    <button class="nav-item active" data-view="home"><span>⌂</span> Overview</button>
+    <button class="nav-item" data-view="discover"><span>◈</span> Discover all</button>
+    <button class="nav-item" data-tab="latest"><span>✳</span> Latest discoveries</button>
+    <button class="nav-item" data-tab="trending"><span>↗</span> Trending now</button>
+    <button class="nav-item" data-tab="free"><span>◇</span> Free discoveries</button>
+  </nav>
+  <div class="side-label spaced">DISCOVERY ZONES</div>
+  <nav class="primary-nav">
+    <button class="nav-item" data-zone="courses"><span>▤</span> Free courses</button>
+    <button class="nav-item" data-zone="tools"><span>⌘</span> Free tools</button>
+    <button class="nav-item" data-zone="tricks"><span>✣</span> Internet tricks</button>
+    <button class="nav-item" data-zone="gems"><span>✧</span> Hidden gems</button>
+    <button class="nav-item" data-zone="upcoming"><span>◷</span> Coming soon</button>
+    <button class="nav-item" data-zone="creators"><span>◎</span> Independent creators</button>
+  </nav>
+  <div class="side-label spaced">INTELLIGENCE</div>
+  <nav class="primary-nav">
+    <button class="nav-item" data-view="companies"><span>▦</span> Company radar</button>
+    <button class="nav-item" data-view="research"><span>⌕</span> Research lab</button>
+    <button class="nav-item" data-view="categories"><span>▧</span> 30 departments</button>
+    <button class="nav-item" data-view="admin"><span>⚙</span> Admin studio</button>
+  </nav>
+  <div class="sidebar-bottom"><div class="status-dot"></div><span id="sideStatus">Connecting to discovery engine…</span></div>
+</aside>
+<main class="main" id="home">
+<header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button><div class="breadcrumb">DISCOVERY / <b id="crumb">OVERVIEW</b></div><div class="top-actions"><span class="live-indicator"><i></i> ENGINE STATUS</span><button class="icon-btn" id="refreshBtn" title="Refresh discoveries">↻</button><button class="avatar" title="OPENINFO">O</button></div></header>
+<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> THE INTERNET, RESEARCHED FOR YOU</div><h1>Discover what<br><em>matters next.</em></h1><p>New tools. Useful ideas. Free resources. Future launches. One intelligent feed for discoveries worth your time.</p><div class="hero-meta"><span><b id="totalCount">0</b> discoveries indexed</span><span class="meta-sep">/</span><span id="lastScan">Waiting for first scan</span></div></div><div class="hero-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-core">O<span>+</span></div><div class="orbit-tag tag-one">NEW SIGNALS</div><div class="orbit-tag tag-two">GLOBAL WEB</div><div class="orbit-tag tag-three">OPEN SOURCE</div></div></section>
+<section class="search-row"><div class="searchbox"><span class="search-icon">⌕</span><input id="searchInput" placeholder="Search tools, courses, AI, projects, websites…" autocomplete="off"><kbd>ENTER</kbd></div><button class="filter-btn" id="filterBtn">☷ <span>Filters</span></button></section>
+<section class="quick-filters" id="quickFilters"><button class="chip selected" data-tab="all">Everything</button><button class="chip" data-tab="latest">Just discovered</button><button class="chip" data-tab="free">Free & open source</button><button class="chip" data-tab="trending">Trending</button><span class="filter-note">Freshness and verification are shown separately</span></section>
+<section class="feature-grid">
+ <article class="feature-card feature-dark" data-zone="courses"><div class="feature-top"><span class="feature-icon">▤</span><span class="feature-kicker">LEARN WITHOUT LIMITS</span><span class="feature-arrow">↗</span></div><h3>Free courses<br>& learning.</h3><p>Courses, certificates, university material and learning opportunities.</p><button class="text-link" data-zone="courses">Explore courses <b>→</b></button><div class="feature-decoration deco-books">▤</div></article>
+ <article class="feature-card feature-sand" data-zone="tools"><div class="feature-top"><span class="feature-icon">⌘</span><span class="feature-kicker">TOOLS THAT HELP</span><span class="feature-arrow">↗</span></div><h3>Free tools.<br>Real utility.</h3><p>AI, developer, creator, hosting, API and productivity tools.</p><button class="text-link" data-zone="tools">Explore tools <b>→</b></button><div class="feature-decoration deco-grid">✳</div></article>
+ <article class="feature-card feature-olive" data-zone="upcoming"><div class="feature-top"><span class="feature-icon">◷</span><span class="feature-kicker">WHAT'S NEXT</span><span class="feature-arrow">↗</span></div><h3>Coming soon<br>radar.</h3><p>Official announcements, beta releases and public roadmaps.</p><button class="text-link" data-zone="upcoming">See the radar <b>→</b></button><div class="feature-decoration deco-orbit">◎</div></article>
+</section>
+<section class="content-section" id="feedSection"><div class="section-heading"><div><div class="eyebrow">SIGNALS FROM THE OPEN WEB</div><h2 id="feedTitle">Fresh discoveries<span>.</span></h2><p id="feedSubtitle">Real findings from connected public sources. No placeholder stories.</p></div><div class="section-actions"><select id="categorySelect"><option value="">All departments</option></select><button class="view-btn active" aria-label="Grid view">▦</button></div></div><div id="discoveryGrid" class="discovery-grid"><div class="empty-state"><div class="empty-symbol">◎</div><h3>Discovery feed is warming up</h3><p>Run a scan to collect real public discoveries from GitHub, Hugging Face and Hacker News.</p><button class="primary-btn" id="firstScan">Run first discovery scan <span>→</span></button></div></div></section>
+<section class="department-section" id="departmentSection"><div class="section-heading"><div><div class="eyebrow">EXPLORE BY FIELD</div><h2>30 discovery departments<span>.</span></h2><p>150 focused subcategories, connected to one discovery engine.</p></div><button class="subtle-btn" data-view="categories">View all departments →</button></div><div class="department-grid" id="departmentGrid"></div></section>
+<section class="admin-section" id="adminSection" hidden><div class="section-heading"><div><div class="eyebrow">OPERATIONS & SOURCE HEALTH</div><h2>Admin intelligence studio<span>.</span></h2><p>Actual scan records and connector health. No simulated counters.</p></div><button class="primary-btn" id="adminScanBtn">Start source scan →</button></div><div class="admin-metrics" id="adminMetrics"></div><div class="source-list" id="sourceList"></div><div class="scan-history" id="scanHistory"></div></section>
+<section class="engine-strip"><div><div class="eyebrow">BEHIND THE DISCOVERIES</div><h2>One engine.<br><em>Many directions.</em></h2><p>Specialist research agents scan, cross-check, organise and update findings from permitted public sources.</p></div><div class="agent-list"><span>01 / Source Hunter</span><span>02 / AI & Tool Hunter</span><span>03 / Course Hunter</span><span>04 / Trend Hunter</span><span>05 / Upcoming Hunter</span><span>06 / Verification Agent</span><span>07 / Duplicate Agent</span><span>08 / Translation Agent</span></div></section>
+<footer class="footer"><div class="footer-brand">OPENINFO <span>· DISCOVER MORE</span></div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="/../docs/README.html" id="aboutLink">About the project</a><a href="#" id="reportLink">Report an issue</a></div><div class="creator-credit">Created by <strong>Shivank Dwivedi</strong></div><div class="footer-small">Independent discovery platform · Public sources · Free-first</div></footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="filterModal"><div class="modal"><button class="modal-close" id="closeModal">×</button><div class="eyebrow">REFINE YOUR DISCOVERIES</div><h2>Feed filters</h2><label>Department<select id="modalCategory"><option value="">All departments</option></select></label><label>Search freshness<select id="dateFilter"><option value="">Any date</option><option value="24">Last 24 hours</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label><div class="modal-actions"><button class="subtle-btn" id="clearFilters">Clear</button><button class="primary-btn" id="applyFilters">Apply filters →</button></div></div></div>
+<script src="/app.js" defer></script>
+</body></html>
